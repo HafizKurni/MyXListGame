@@ -2,7 +2,6 @@ package com.dicoding.myxgame.ui.screen.detail
 
 import androidx.lifecycle.ViewModel
 import com.dicoding.myxgame.data.Repository
-import com.dicoding.myxgame.model.Game
 import com.dicoding.myxgame.ui.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
