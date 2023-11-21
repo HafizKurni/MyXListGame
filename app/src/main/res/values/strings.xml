@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyXGame</string>
+    <string name="search_char">Search Game</string>
+    <string name="scroll_to_top">Scroll to Top</string>
+    <string name="about_name">Hafiz Muhammad Kurniawan</string>
+    <string name="about_email">kurni.hafiz2002@gmail.com</string>
+    <string name="about_me">About Me</string>
+    <string name="empty">No Game is Booked</string>
+    <string name="navigation_back">Navigation Back</string>
+    <string name="searchbar_hint_text">Cari Game</string>
+    <string name="name">Name Game:</string>
+    <string name="console">Platform:</string>
+    <string name="developer">Developer:</string>
+    <string name="gender">Gender:</string>
+    <string name="publisher">Publisher:</string>
+    <string name="release">Release:</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_about">About</string>
+</resources>
