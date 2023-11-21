@@ -3,6 +3,7 @@ package com.dicoding.myxgame.ui.screen.home
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -85,6 +86,7 @@ fun HomeContent(
             LazyColumn(
                 state = listState,
                 contentPadding = PaddingValues(bottom = 80.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = modifier.testTag("GameList")
             ) {
                 items(listGames, key = { it.id }) { game ->

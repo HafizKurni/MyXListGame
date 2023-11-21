@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,40 +30,46 @@ fun ListItem(
     game: Game,
     modifier: Modifier = Modifier
 ) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
+    Card(
+        modifier = modifier,
+        shape = RoundedCornerShape(8.dp)
     ) {
-        Image(
-            painter = painterResource(id = game.photoId),
-            contentDescription = game.name,
-            contentScale = ContentScale.Fit,
-            modifier = Modifier
-                .padding(8.dp)
-                .size(60.dp)
-                .clip(Shapes.small))
-        Column(
-            modifier = Modifier.weight(1f)
-        ){
-            Text(
-                text = game.name,
-                fontWeight = FontWeight.Medium,
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = modifier
+        ) {
+            Image(
+                painter = painterResource(id = game.photoId),
+                contentDescription = game.name,
+                contentScale = ContentScale.Fit,
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 8.dp)
+                    .padding(8.dp)
+                    .size(60.dp)
+                    .clip(Shapes.small)
             )
-            Text(
-                text = game.console,
-                fontSize = 12.sp,
-                fontWeight = FontWeight.Medium,
-                fontStyle = FontStyle.Italic,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 8.dp)
-            )
+            Column(
+                modifier = Modifier.weight(1f)
+            ) {
+                Text(
+                    text = game.name,
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = 8.dp)
+                )
+                Text(
+                    text = game.console,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Medium,
+                    fontStyle = FontStyle.Italic,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = 8.dp)
+                )
+            }
+
+
         }
-
-
     }
 }
 
